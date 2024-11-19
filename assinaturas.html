@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinaturas Salvas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4fcd4; /* Verde claro */
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ffe600; /* Amarelo brilhante */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .container h1 {
+            color: #2e8b57;
+            margin-bottom: 20px;
+        }
+
+        .geometric-image {
+            margin-top: 20px;
+            display: inline-block;
+            border: 5px solid #ffe600; /* Amarelo brilhante */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .geometric-image img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button-back a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffe600; /* Amarelo brilhante */
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-back a:hover {
+            background-color: #ffdd00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assinaturas Salvas</h1>
+        <p><strong>Assinatura de Ana Paula:</strong> <span id="assinatura1"></span></p>
+        <p><strong>Assinatura de Felipe Tavares:</strong> <span id="assinatura2"></span></p>
+        <div class="button-back">
+            <a href="index.html">Voltar ao Contrato</a>
+        </div>
+
+        <!-- Foto geométrica -->
+        <div class="geometric-image">
+            <img src="sorriso.jfif" alt="Imagem geométrica com bordas coloridas">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("assinatura1").textContent = localStorage.getItem("assinatura1") || "Não assinada";
+        document.getElementById("assinatura2").textContent = localStorage.getItem("assinatura2") || "Não assinada";
+    </script>
+</body>
+</html>

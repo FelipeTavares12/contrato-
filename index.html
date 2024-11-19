@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Convite para Passeio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #dfffdf; /* Verde claro */
+        color: #444;
+        margin: 0;
+        padding: 0;
+    }
+    .convite {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        border: 2px solid #b3ffb3; /* Verde claro mais escuro */
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #ffd700; /* Amarelo brilhante */
+        margin-bottom: 20px;
+    }
+    h2 {
+        color: #006600; /* Verde escuro */
+        margin-top: 20px;
+        border: 2px solid #ffd700; /* Amarelo brilhante */
+        padding: 10px;
+        background-color: #f0fff0; /* Verde claro */
+    }
+    p {
+        margin: 10px 0;
+    }
+    hr {
+        margin: 20px 0;
+        border: 1px solid #b3ffb3;
+    }
+    .signature-section {
+        background-color: #ffffcc; /* Amarelo claro */
+        padding: 10px;
+        border: 2px solid #ffd700; /* Amarelo brilhante */
+        margin-top: 20px;
+    }
+    .signature-section input {
+        width: calc(100% - 20px);
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #b3ffb3;
+        border-radius: 4px;
+    }
+    .view-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .view-link a {
+        color: #006600;
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid #ffd700;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #f0fff0;
+    }
+    .view-link a:hover {
+        background-color: #dfffdf;
+        color: #004d00;
+    }
+</style>
+</head>
+<body>
+<div class="convite">
+    <h1>CONTRATO DE CONVITE PARA PASSEIO</h1>
+    <div class="info">
+        <p><strong>Entre:</strong></p>
+        <p>
+            Ana Paula Santana, brasileira, solteira, estudante, portadora do RG nº 
+            00.111.323-0 e inscrita no CPF nº 000.111.222-33, residente e domiciliada em 
+            Rua Faustino Rodrigues Martins, 400, Vila Mineirão, Sorocaba-SP, doravante 
+            denominada "Primeiro Contratante",
+        </p>
+        <p>
+            e
+        </p>
+        <p>
+            Felipe Tavares, brasileiro, solteiro, estudante, portador do RG nº 00.222.232-0 e 
+            inscrito no CPF nº 000.333.222-11, residente e domiciliado em Pilar do Sul-SP, 
+            doravante denominado "Segundo Contratante",
+        </p>
+        <p>
+            Resolvem celebrar o presente contrato, que se regerá pelas cláusulas e 
+            condições a seguir:
+        </p>
+        <h2>Objeto do Contrato:</h2>
+        <p>
+            O presente contrato tem por objeto o convite da Primeira Contratante ao 
+            Segundo Contratante para um passeio, não se tratando de um encontro romântico, 
+            mas apenas um passeio entre colegas.
+        </p>
+        <h2>Local do Passeio:</h2>
+        <p>O local do passeio será acordado entre as partes em momento oportuno.</p>
+        <h2>Natureza do Passeio:</h2>
+        <p>
+            O passeio será realizado de forma amigável, visando apenas a interação 
+            social e o lazer entre as partes, sem qualquer compromisso adicional.
+        </p>
+        <h2>Aceitação do Convite:</h2>
+        <p>
+            O Segundo Contratante compromete-se a responder ao convite em até 
+            três dias após a Primeira Contratante marcar data e local, que poderá ser escolhido 
+            até a data 31/12/2024.
+        </p>
+        <h2>Tentativa Final:</h2>
+        <p>
+            Este convite representa a última tentativa da Primeira Contratante de 
+            convidar o Segundo Contratante para um passeio. Caso o convite não seja aceito, 
+            a Primeira Contratante compromete-se a não insistir mais em convites futuros 
+            relacionados a passeios ou encontros.
+        </p>
+        <h2>Disposições Gerais:</h2>
+        <p>
+            Qualquer alteração neste contrato deve ser feita por escrito e acordada 
+            por ambas as partes.
+        </p>
+        <p>
+            E, por estarem justos e contratados, assinam o presente instrumento 
+            em duas vias de igual teor e forma, para que produza seus jurídicos e legais 
+            efeitos.
+        </p>
+        <p>Sorocaba, 18 de Novembro de 2024.</p>
+        <div class="signature-section">
+            <label for="assinatura1">Assinatura de Ana Paula:</label>
+            <input type="text" id="assinatura1" placeholder="Digite aqui..." />
+            <label for="assinatura2">Assinatura de Felipe Tavares:</label>
+            <input type="text" id="assinatura2" placeholder="Digite aqui..." />
+            <button onclick="saveSignatures()">Salvar Assinaturas</button>
+        </div>
+        <div class="view-link">
+            <a href="assinaturas.html">Ver Assinaturas Salvas</a>
+        </div>
+    </div>
+</div>
+<script>
+    function saveSignatures() {
+        const assinatura1 = document.getElementById("assinatura1").value;
+        const assinatura2 = document.getElementById("assinatura2").value;
+        localStorage.setItem("assinatura1", assinatura1);
+        localStorage.setItem("assinatura2", assinatura2);
+        alert("Assinaturas salvas com sucesso!");
+    }
+</script>
+</body>
+</html>
